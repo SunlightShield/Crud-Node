@@ -5,9 +5,12 @@ const mongoose = require ("mongoose");
 const app = express()
 const Product = require("./models/productModels") 
 const bodyParser = require('body-parser')
+const cors = require('cors');
 
 app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(cors());
 
 //routes
 
